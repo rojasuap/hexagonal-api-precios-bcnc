@@ -4,7 +4,7 @@ import es.bcnc.hexagonal.servicios.model.PriceModel;
 
 import java.util.Optional;
 
-public interface GetPricesByCurrentDateAndProductIdAndBrandIdUserCase {
+public interface GetPriceByCurrentDateAndProductIdAndBrandIdUserCase {
     Optional<PriceModel> getPricesByCurrentDateAndProductIdAndBrandId(String currentDate,
                                                                       Integer productId,
                                                                       Integer brandId);

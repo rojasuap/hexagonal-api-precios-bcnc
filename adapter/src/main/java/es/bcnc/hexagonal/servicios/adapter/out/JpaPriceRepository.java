@@ -23,6 +23,10 @@ public class JpaPriceRepository implements PriceRepository {
         Optional<PriceJpaEntity> optPriceJpaEntity= jpaPriceSpringDataRepository.findByCurrentDateAndProductIdAndBrandId(currentDate, productId, brandId);
 
         return optPriceJpaEntity.map(PriceMapper::toDto);
+    }
 
+    @Override
+    public PriceModel save(PriceModel priceModel) {
+        return PriceMapper.toDto(jpaPriceSpringDataRepository.save(PriceMapper.toEntity(priceModel)));
     }
 }

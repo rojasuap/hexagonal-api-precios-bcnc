@@ -1,4 +1,4 @@
-package es.bcnc.hexagonal.servicios.controller;
+package es.bcnc.hexagonal.servicios.integrationTest;
 
 import es.bcnc.hexagonal.servicios.adapter.in.PriceWebModel;
 import org.junit.jupiter.api.*;
@@ -7,14 +7,12 @@ import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWeb
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.reactive.server.WebTestClient;
-
 import java.math.BigDecimal;
-
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureWebTestClient
-class PriceControllerTest {
+class PriceControllerWebClientTest {
 
     @Autowired
     private WebTestClient webTestClient;
