@@ -36,4 +36,9 @@
 		</dependency>
 	</dependencies>
 
+	<build>
+		<finalName>hexagonal-api-precios-docker</finalName>
+	</build>
+
+
 </project>
